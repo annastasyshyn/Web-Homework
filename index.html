@@ -1,59 +1,76 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="./styles/styles.css" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <title>Jez Salad</title>
     </head>
     <body>
+        <!-- <img src="./assets/main_page_bg.png" alt="Background pattern" class="main-page-bg"/> -->
         <header class="main-page-header">
-            <img src="./assets/background.svg" alt="Background pattern"/>
-            <a href="#" class="header-logo-link"><span class="orange-highlight">JEZ</span> SALAD</a>
-            <nav>
-                <a href="#" class="header-link">Home</a>
-                <a href="#" class="header-link">Menu</a>
-                <a href="#" class="header-link">Contact</a>
-                <a href="#" class="header-link">About Us</a>
-            </nav>
-            <button class="header-sign-button">Sign</button>
+            <div class="header-container">
+                <a href="#" class="header-logo-link"><span class="orange-highlight">JEZ</span> SALAD</a>
+                <nav>
+                    <a href="#" class="orange-highlight header-link">Home</a>
+                    <a href="#" class="header-link">Menu</a>
+                    <a href="#" class="header-link">Contact</a>
+                    <a href="#" class="header-link">About Us</a>
+                </nav>
+                <button class="header-sign-button">Sign</button>
+            </div>
         </header>
         <main>
             <section class="main-page">
-                <span class="highlighted">#1 Best Healthy Salad</span>
-                <h2 class="main-page-heading"><span>Skip</span> the Diet, Just Eat Healthy With Jez Salad</h2>
-                <p>Imagine you don't need a diet because we provide healthy and delicious food for you!</p>
-                <button>Order Food</button>
-                <div class="main-page-stats">
-                    <div class="main-page-stats-item">
-                        <span>5.000+</span>
-                        <span>Customer</span>
-                    </div>
-                    <div class="main-page-stats-item">
-                        <span>8.000+</span>
-                        <span>Delivery</span>
-                    </div>
-                    <div class="main-page-stats-item">
-                        <span>1.000+</span>
-                        <span>Ratings</span>
+                <div class="main-page-left">
+                    <span class="highlighted">#1 Best Healthy Salad</span>
+                    <h2 class="main-page-heading"><span class="orange-highlight">Skip</span> the Diet,<br>
+                        Just Eat Healthy<br>
+                        With Jez Salad</h2>
+                    <p class="main-page-subheading">Imagine you don't need a diet because we provide<br>
+                        healthy and delicious food for you!</p>
+                    <button class="order-button">Order Food</button>
+                    <div class="main-page-stats">
+                        <div class="main-page-stats-item">
+                            <span class="main-page-stats-digits">5.000+</span>
+                            <span class="main-page-stats-sub">Customer</span>
+                        </div>
+                        <div class="main-page-stats-item">
+                            <span class="main-page-stats-digits">8.000+</span>
+                            <span class="main-page-stats-sub">Delivery</span>
+                        </div>
+                        <div class="main-page-stats-item">
+                            <span class="main-page-stats-digits">1.000+</span>
+                            <span class="main-page-stats-sub">Ratings</span>
+                        </div>
                     </div>
                 </div>
+                <img class="woman-image" src="./assets/JezSalad.png"/>
                 <aside class="aside-main-page">
-                    <img src="./assets/JezSalad.png" alt="Salad Lady"/>
                     <div class="main-page-rating">
                         <img src="./assets/smiley.svg" alt="Happy Smiley Face"/>
-                        <h4>Our Happy Customer</h4>
-                        <img src="./assets/star.svg" alt="Star Rating">
-                        <span><b>4.9</b> (1989 reviews)</span>
+                        <div class="main-page-rating-content">
+                            <h4>Our Happy Customer</h4>
+                            <div class="main-page-rating-stars">
+                                <img src="./assets/star.svg" alt="Star Rating">
+                                <span><b>4.9</b> (1989 reviews)</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="main-page-cals">
                         <h4>Daily Calories</h4>
                         <h2>123 Calories</h2>
                         <div class="main-page-cals-bars">
-                            <progress value="32" max="100"></progress>
-                            <progress value="45" max="100"></progress>
-                            <progress value="23" max="100"></progress>
-                            <progress value="67" max="100"></progress>
-                            <progress value="89" max="100"></progress>
+                            <div class="cals-bar" data-value="32"></div>
+                            <div class="cals-bar" data-value="45"></div>
+                            <div class="cals-bar" data-value="32"></div>
+                            <div class="cals-bar" data-value="45"></div>
+                            <div class="cals-bar" data-value="32"></div>
+                            <div class="cals-bar" data-value="45"></div>
+                            <div class="cals-bar" data-value="32"></div>
+                            <div class="cals-bar" data-value="45"></div>
                         </div>
                     </div>
                 </aside>
@@ -129,34 +146,53 @@
                     </article>
                 </div>
             </section>
-            <form class="subscribtion-form">
-                <h4>Our Subscribe</h4>
-                <h2>Subscribe To Get The Latest Promo from Jez Salad</h2>
-                <span>We recommended you to subscribe to our promo program, drop your email below to get daily update about us</span>
-                <div>
-                    <input type="email" placeholder="Enter your email"></input>
-                    <input type="submit" class="form-submit-button">Subscribe</input>
+
+            <!-- FORM -->
+            <div class="form-section">
+                <img src="./assets/form_bg.svg" alt="Form Background" class="form-section-bg"/>
+                <div class="form-section-elements">
+                    <h4 class="form-upper-text orange-highlight">Our Subscribe</h4>
+                    <h2 class="form-heading">Subscribe To Get The Latest<br>
+                        Promo from Jez Salad</h2>
+                    <span class="form-text">We recommended you to subscribe to our promo program, drop your email below to get daily update about us</span>
+                    <form class="subscribtion-form">
+                        <input type="email" placeholder="Enter your email"></input>
+                        <input type="submit" class="form-submit-button">Subscribe</input>
+                    </form>
                 </div>
-            </form>
+            </div>
+
+            <!-- <div class="form-section">
+                <img src="assets/form_bg.svg" class="form-section-bg"/>
+                
+            </div> -->
         </main>
+
+        <!-- FOOTER -->
         <footer class="main-page-footer">
             <div class="footer-info">
-                <b>JEZ SALAD</b>
-                <span>Jez Salad is the pioneer of healthy fruit salad with high nutrition.</span>
-                <span>©Copyright Jez Salad</span>
+                <span class="footer-logo"><span class="orange-highlight">JEZ</span> SALAD</span>
+                <div class="footer-info-subsection">
+                    <span class="footer-text">Jez Salad is the pioneer of<br>
+                        healthy fruit salad with<br>
+                        high nutrition.</span>
+                    <span class="footer-copyright">©Copyright Jez Salad</span>
+                </div>
             </div>
             <div class="footer-links">
-                <a href="#" class="footer-link"><span>Feature</span></a>
+                <a href="#" class="footer-link orange-highlight"><span>Feature</span></a>
                 <a href="#" class="footer-link">Home</a>
                 <a href="#" class="footer-link">Menu</a>
                 <a href="#" class="footer-link">Contact</a>
                 <a href="#" class="footer-link">About Us</a>
             </div>
             <div class="footer-contact">
+                <span class="footer-contact-info-header orange-highlight">Get in Touch</span>
                 <div class="footer-contact-info">
                     <div class="footer-contact-info-item">
                         <img src="./assets/location_on.svg" alt="Location Icon"/>
-                        <span>8819 Ohio St. South Gate, CA 90280</span>
+                        <span>8819 Ohio St. South Gate,<br>
+                            CA 90280</span>
                     </div>
                     <div class="footer-contact-info-item">
                         <img src="./assets/email.svg" alt="Email Icon"/>
@@ -169,10 +205,12 @@
                 </div>
             </div>
             <div class="footer-social-media">
-                <a href="#" class="footer-social-media-link"><img src="./assets/twitter.svg" alt="Twitter"/></a>
-                <a href="#" class="footer-social-media-link"><img src="./assets/linkedin.svg" alt="LinkedIn"/></a>
-                <a href="#" class="footer-social-media-link"><img src="./assets/instagram.svg" alt="Instagram"/></a>
-                <span>Follow our social media.</span>
+                <div class="footer-social-media-icons">
+                    <a href="#" class="footer-social-media-link"><img src="./assets/twitter.svg" alt="Twitter"/></a>
+                    <a href="#" class="footer-social-media-link"><img src="./assets/linkedin.svg" alt="LinkedIn"/></a>
+                    <a href="#" class="footer-social-media-link"><img src="./assets/instagram.svg" alt="Instagram"/></a>
+                </div>
+                <span class="footer-social-media-subheading">Follow our social media.</span>
             </div>
         </footer>
     </body>

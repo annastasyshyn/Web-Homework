@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --accent-color: #FB9333;
+    --main-text-color: #575757;
+    --light-text-color: #999999;
+    --accent-bg-color: #FFC87A;
+    --accent-bg-light: #FFF1DE;
+    --accent-bg-light: #FFF0DC;
+    --lighter-text-color: #828282;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--main-text-color);
+    margin: 0px;
+}
+
+.header-logo-link {
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Roboto', serif;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.woman-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-link {
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 27px;
+    padding-right: 27px;
+}
+
+.header-link.orange-highlight {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.header-sign-button {
+    all: unset;
+    border-radius: 100px;
+    background-color: #FB9333;
+    color: #FFFFFF;
+    padding: 12px 48px 12px 48px;
+    font-weight: 600;
+}
+
+.highlighted {
+    background-color: var(--accent-bg-light);
+    border-radius: 100px;
+    font-weight: 600;
+    color: var(--accent-color);
+    padding: 16px;
+}
+
+.orange-highlight {
+    color: var(--accent-color);
+}
+
+.main-page {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-page-heading {
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.main-page-subheading {
+    color: var(--lighter-text-color);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.order-button {
+    all: unset;
+    border-radius: 100px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 24px 48px 24px 48px;
+    font-weight: 600;
+}
+
+.main-page-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+.main-page-stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+}
+
+.main-page-stats-digits {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.main-page-stats-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--light-text-color);
+}
+
+.aside-main-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.main-page-rating {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-page-rating-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-page-rating-stars {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-page-cals {
+    display: flex;
+    flex-direction: column;
+}
+
+.cals-bar {
+    height: 40px;
+    width: 6px;
+    background: #E7E5F1;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transform-origin: bottom;
+}
+
+.main-page-cals-bars {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 12px;
+}
+  
+.cals-bar {
+    width: 10px;
+    height: 73px;
+    border-radius: 100px;
+    background-color: #eee;
+    position: relative;
+    border-radius: 4px; 
+    overflow: hidden;
+}
+
+.cals-bar::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: orange;
+    height: 0%;
+    transition: height 0.3s;
+}
+  
+.cals-bar[data-value="32"]::before {
+    height: 32%;
+}
+
+.cals-bar[data-value="45"]::before {
+    height: 45%;
+}
+
+/* Form styles */
+
+.form-section {
+    position: absolute;
+    z-index: -1;
+}
+
+.form-section-bg {
+    position: absolute;
+    z-index: -1;
+    border-radius: 50px;
+    background-color: var(--accent-bg-light);
+    border-radius: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+.form-section-elements {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    align-items: center;
+    text-align: center;
+}
+
+.form-upper-text {
+    font-weight: 500;
+    font-size: 20px;   
+}
+
+.form-heading {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.form-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--light-text-color)
+}
+
+/* Footer styles */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 80px 50px 80px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.footer-info > *:last-child {
+    margin-top: auto;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Roboto', serif;
+    color: var(--main-text-color)
+}
+
+.footer-text, .footer-copyright {
+    font-size: 16px;
+    color: var(--main-text-color);
+    font-weight: 400;
+}
+
+.footer-info-subsection {
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-link.orange-highlight {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.footer-link {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.footer-contact-info-header {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-weight: 400;
+}
+
+.footer-contact-info-item {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.footer-social-media {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-social-media-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.footer-social-media-subheading {
+    font-size: 16px;
+    font-weight: 400;
+}
