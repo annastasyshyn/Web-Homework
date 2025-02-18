@@ -206,6 +206,68 @@ a:active {
     height: 45%;
 }
 
+/* Menu styles */
+
+.menu-section {
+    margin-top: 120px;
+}
+
+.menu-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-upper-text {
+    font-weight: 500;
+    font-size: 20px; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.menu-heading {
+    font-size: 48px;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 17px;
+    padding: 0px;
+}
+
+.menu-pages {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 120px;
+}
+
+.menu-pages-item {
+    position: relative;
+    height: 510px;
+    width: 28%;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    color: var(--white);
+}
+
+.menu-salad-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 20px;
+
+}
+
+.menu-salad-price {
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 24px;
+    margin-bottom: 5px;
+}
+
 /* Form styles */
 
 .form-section {
