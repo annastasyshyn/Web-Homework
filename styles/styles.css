@@ -209,42 +209,78 @@ a:active {
 /* Form styles */
 
 .form-section {
-    position: absolute;
-    z-index: -1;
-}
-
-.form-section-bg {
-    position: absolute;
-    z-index: -1;
-    border-radius: 50px;
+    margin: 0px 120px;
+    margin-top: 220px;
+    margin-bottom: 160px;
+    position: relative;
+    background-image: url('../assets/background.svg');
+    background-size: cover;
+    background-position: center 0%;
+    padding: 60px 0;
+    text-align: center;
     background-color: var(--accent-bg-light);
     border-radius: 50px;
-    align-items: center;
-    text-align: center;
 }
+    
 
 .form-section-elements {
     display: flex;
     flex-direction: column;
-    z-index: 2;
-    align-items: center;
-    text-align: center;
 }
 
 .form-upper-text {
-    font-weight: 500;
-    font-size: 20px;   
+    font-weight: 400;
+    font-size: 20px; 
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .form-heading {
     font-size: 48px;
     font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 17px;
+    padding: 0px;
 }
 
 .form-text {
     font-size: 16px;
+    font-weight: 400;
+    color: var(--light-text-color);
+    margin-top: 0px;
+    margin-bottom: 70px;
+    opacity: 0.8;
+}
+
+.subscription-form {
+    background-color: var(--white);
+    display: flex;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 0 200px;
+    margin-bottom: 23px;
+}
+
+.form-submit-input {
+    all: unset;
+    font-size: 16px;
+    color: var(--main-text-color);
+    width: 100%;
+    padding: 15px 30px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.form-submit-button {
+    all: unset;
+    border-radius: 100px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 50px;
+    margin-left: 10px;
     font-weight: 500;
-    color: var(--light-text-color)
+    font-size: 18px;
 }
 
 /* Footer styles */
