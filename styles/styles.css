@@ -11,6 +11,8 @@
     --lighter-text-color: #828282;
     --white: #FFFFFF;
     --num-color: #CCCCCC;
+    --accent-gradient: #FFD7A0;
+    --cals-bar-color: #F5F5F5;
 }
 
 body {
@@ -36,10 +38,12 @@ a:active {
 }
 
 .header-container {
+    margin: 0 120px;
+    margin-top: 30px;
+    margin-bottom: 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
 }
 
 .woman-image {
@@ -67,7 +71,7 @@ a:active {
     border-radius: 100px;
     background-color: #FB9333;
     color: #FFFFFF;
-    padding: 12px 48px 12px 48px;
+    padding: 16px 52px;
     font-weight: 600;
 }
 
@@ -84,19 +88,32 @@ a:active {
 }
 
 .main-page {
+    margin-left: 120px;
+    margin-bottom: 120px;
     display: flex;
     flex-direction: row;
+}
+
+.main-page-left {
+    width: 50%;
 }
 
 .main-page-heading {
     font-size: 72px;
     font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+    margin-top: 50px;
 }
 
 .main-page-subheading {
     color: var(--lighter-text-color);
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 500;
+    margin: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
 }
 
 .order-button {
@@ -113,8 +130,8 @@ a:active {
 .main-page-stats {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 48px;
+    gap: 50px;
+    margin-top: 75px;
 }
 
 .main-page-stats-item {
@@ -131,20 +148,53 @@ a:active {
 
 .main-page-stats-sub {
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
     color: var(--light-text-color);
 }
 
 .aside-main-page {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: auto;
+    position: relative;
+    width: 50%;
 }
 
 .main-page-rating {
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 70px;
+    right: 410px;
     display: flex;
     flex-direction: row;
+    border-radius: 50px;
+    box-shadow: 0 30px 40px rgba(255, 165, 0, 0.2);
+    padding: 5px;
+    padding-right: 35px;
+}
+
+.main-page-rating-content {
+    margin-top: 5px;
+    display: flex;
+    gap: 8px;
+    margin-left: 10px;
+    
+}
+.main-page-rating-content h4 {
+    margin: 0;
+    color: var(--main-text-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.main-page-rating-stars span{
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #5757578c;
+}
+
+.main-page-rating-stars span b{
+    font-weight: 600;
+    color: #575757;
 }
 
 .main-page-rating-content {
@@ -158,32 +208,49 @@ a:active {
 }
 
 .main-page-cals {
+    position: absolute;
+    bottom: -30px;
+    right: 93px;
     display: flex;
     flex-direction: column;
+    background-color: #fffffffb;
+    border-radius: 28px;
+    padding: 20px;
 }
 
-.cals-bar {
-    height: 40px;
-    width: 6px;
-    background: #E7E5F1;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    transform-origin: bottom;
+.main-page-cals h4 {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--main-text-color);
+    margin: 0;
+    margin-bottom: 4px;
 }
+
+.main-page-cals h2 {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--main-text-color);
+    margin: 0;
+    margin-bottom: 17px;
+}
+
+.cals-num {
+    color: #2B2B2B;
+}
+
 
 .main-page-cals-bars {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    gap: 12px;
+    gap: 7px;
 }
   
 .cals-bar {
     width: 10px;
     height: 73px;
     border-radius: 100px;
-    background-color: #eee;
+    background-color: var(--cals-bar-color);
     position: relative;
     border-radius: 4px; 
     overflow: hidden;
@@ -195,9 +262,14 @@ a:active {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: orange;
+    background: linear-gradient(
+        180deg, 
+        var(--accent-gradient) 0%, 
+        var(--accent-color) 100%
+        );
     height: 0%;
     transition: height 0.3s;
+    border-radius: 100px;
 }
   
 .cals-bar[data-value="32"]::before {
@@ -206,6 +278,31 @@ a:active {
 
 .cals-bar[data-value="45"]::before {
     height: 45%;
+}
+
+.cals-bar[data-value="66"]::before {
+    height: 66%;
+}
+
+
+.cals-bar[data-value="51"]::before {
+    height: 51%;
+}
+
+.cals-bar[data-value="39"]::before {
+    height: 39%;
+}
+
+.cals-bar[data-value="69"]::before {
+    height: 69%;
+}
+
+.cals-bar[data-value="73"]::before {
+    height: 73%;
+}
+
+.cals-bar[data-value="80"]::before {
+    height: 80%;
 }
 
 /* Why us styles */
@@ -220,22 +317,25 @@ a:active {
     display: flex;
     flex-direction: row;
     justify-self: space-between;
+    align-items: center;
     margin-bottom: 70px;
     font-weight: 400;
-    gap: 134px;
 }
 
 .benefits-heading { 
     text-align: left;
     font-size: 48px;
+    line-height: 1.2;
     font-weight: 600;
-    width: 1700px;
+    width: 100%;
     margin: 0;
+    padding: 0;
 }
 
 .benefits-subtext {
     font-size: 20px;
     color: var(--lighter-text-color);
+    width: 58%;
     line-height: 1.6;
 }
 
@@ -278,12 +378,13 @@ a:active {
 
 .benefit-link-container {
     margin-top: 10px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
     border-radius: 100px;
+    padding: 10px;
+    padding-left: 19px;
+    margin-right: 50%;
     font-weight: 400;
 }
+
 
 .benefit-link {
     color: var(--main-text-color);
@@ -300,15 +401,21 @@ a:active {
     color: inherit
 }
 
-.benefit-link:hover {
+.benefit-link-container:hover {
     color: var(--white);
     transition: transform 0.7s ease;
     background-color: var(--accent-color);
+    img {
+        filter: invert(100%) brightness(1000%);
+    }
 }
 
-.benefit-link:hover img {
-    filter: invert(100%) brightness(1000%);
-}
+.benefits-pages-item:hover {
+    box-shadow: 0 30px 40px rgba(255, 165, 0, 0.2);
+    transition: transform 0.2s ease;
+    transform: translateY(-8px);
+    /* border: none; */
+  }
 
 /* Reviews styles */
 
@@ -325,7 +432,7 @@ a:active {
 }
 
 .reviews-text {
-    width: 2500px;
+    width: 150%;
 }
 
 .reviews-heading {
@@ -451,7 +558,7 @@ a:active {
     font-size: 48px;
     font-weight: 600;
     margin-top: 0px;
-    margin-bottom: 17px;
+    margin-bottom: 60px;
     padding: 0px;
 }
 
@@ -479,7 +586,6 @@ a:active {
     font-size: 24px;
     font-weight: 600;
     margin-left: 20px;
-
 }
 
 .menu-salad-price {
